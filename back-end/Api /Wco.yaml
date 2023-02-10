@@ -1,0 +1,643 @@
+_type: export
+__export_format: 4
+__export_date: 2023-01-05T03:33:03.886Z
+__export_source: insomnia.desktop.app:v2022.6.0
+resources:
+  - _id: req_c24ba76732af4e02b8b777422c9535c3
+    parentId: fld_386776f955904a048859ce9843b4b165
+    modified: 1672886215369
+    created: 1672876393738
+    url: localhost:8050/consulta
+    name: Atualizar Consulta
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	
+        	"data_consulta": "2023-02-21",
+        	"horario": "14:10:03",
+        	"situacao": "Cirugía"
+        }
+    parameters:
+      - id: pair_a429d196ee434357ae9b24bb7668c515
+        name: id
+        value: "8"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_386776f955904a048859ce9843b4b165
+    parentId: wrk_2e8a22150d70408ca36b87fe74c7970d
+    modified: 1672886205045
+    created: 1672875948429
+    name: Consulta
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672884992619
+    _type: request_group
+  - _id: wrk_2e8a22150d70408ca36b87fe74c7970d
+    parentId: null
+    modified: 1672875883304
+    created: 1672875883304
+    name: Wco
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_b978343f69d944a99e4fc4625f864b54
+    parentId: fld_386776f955904a048859ce9843b4b165
+    modified: 1672885886799
+    created: 1672875967865
+    url: localhost:8050/consulta
+    name: Cadastrar Consulta
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	
+        	"data_consulta": "2023-02-21",
+        	"horario": "14:10:03",
+        	"situacao": "Extrair dentes"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_61ec03a5883a4900a3ac8d1f18703002
+    parentId: fld_386776f955904a048859ce9843b4b165
+    modified: 1672876612178
+    created: 1672876480619
+    url: localhost:8050/consulta
+    name: Deletar Consulta
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_33463ad91dd8400fa61f2d30a6e49b3c
+        name: id
+        value: "8"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0f5389be3b5045d5a3bd9e8ff091a9d1
+    parentId: fld_386776f955904a048859ce9843b4b165
+    modified: 1672876612178
+    created: 1672876519875
+    url: localhost:8050/consulta
+    name: Listar Consulta
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_33463ad91dd8400fa61f2d30a6e49b3c
+        name: id
+        value: "8"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 300
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7023c0a5c90846ab8739bfc3ea261cd9
+    parentId: fld_a7a39df9070440288e0b00c132c443a2
+    modified: 1672885633096
+    created: 1672878474551
+    url: localhost:8050/dentista
+    name: Atualizar Dentista
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Mariana Rios", 
+        	"especialidade": "odontopediatria", 
+        	"cpf": "12345678910",
+        	"crm": "45612378963", 
+        	"senha": "123456987", 
+        	"consultaId": 14,
+        	"telefoneId": 2, 
+        	"enderecoId": 12
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672876629966.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a7a39df9070440288e0b00c132c443a2
+    parentId: wrk_2e8a22150d70408ca36b87fe74c7970d
+    modified: 1672886210287
+    created: 1672884239599
+    name: Dentista
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672884992606.5
+    _type: request_group
+  - _id: req_34be5f6fad5346b0b42472d659224163
+    parentId: fld_a7a39df9070440288e0b00c132c443a2
+    modified: 1672886239987
+    created: 1672876632389
+    url: localhost:8050/dentista
+    name: Cadastrar Dentista
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Mariana Rios", 
+        	"especialidade": "odontopediatria", 
+        	"cpf": "12345678910",
+        	"crm": "45612378963", 
+        	"senha": "123456987", 
+        	"consultaId": 14,
+        	"telefoneId": 2, 
+        	"enderecoId": 12
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672876629866.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_671b7e3e8cf54ce9a135dffb28d4b628
+    parentId: fld_a7a39df9070440288e0b00c132c443a2
+    modified: 1672884273298
+    created: 1672878520482
+    url: localhost:8050/dentista
+    name: Deletar Dentista
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672876629841.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d56ebaf2074a4685a76b05eb32c6d363
+    parentId: fld_a7a39df9070440288e0b00c132c443a2
+    modified: 1672884277614
+    created: 1672878446297
+    url: localhost:8050/dentista
+    name: Listar Dentistas
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672876629791.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1efb976dbb8e47acad98587b6d31ed26
+    parentId: fld_f0795a79694741069ca80783e706f19f
+    modified: 1672886023284
+    created: 1672884362835
+    url: localhost:8050/endereco
+    name: Atualizar Endereco
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"cidade" : "Recife",
+        	"estado" : "Pernambuco", 
+        	"bairro": "Ilha do Leite", 
+        	"rua": "Manuel Borba", 
+        	"numero": 589, 
+        	"cep": "12354789"
+        }
+    parameters:
+      - id: pair_ce1fb0b389e8441a9fe4e8bcf2cec758
+        name: id
+        value: "16"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672884331385
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f0795a79694741069ca80783e706f19f
+    parentId: wrk_2e8a22150d70408ca36b87fe74c7970d
+    modified: 1672886208136
+    created: 1672884326658
+    name: Endereco
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672884992594
+    _type: request_group
+  - _id: req_f2187b35c3574b7698e4e643e86e7f1b
+    parentId: fld_f0795a79694741069ca80783e706f19f
+    modified: 1672886023789
+    created: 1672884331085
+    url: localhost:8050/endereco
+    name: Cadastrar Endereco
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"cidade" : "Recife",
+        	"estado" : "Pernambuco", 
+        	"bairro": "Graças", 
+        	"rua": "Manuel Borba", 
+        	"numero": 256, 
+        	"cep": "50721632"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672884331335
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a14e8f1da9e94a989dce56155daf9540
+    parentId: fld_f0795a79694741069ca80783e706f19f
+    modified: 1672885495267
+    created: 1672884400274
+    url: localhost:8050/endereco
+    name: Deletar Endereco
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672884331185
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_999163ba85074cb595089356109983ee
+    parentId: fld_f0795a79694741069ca80783e706f19f
+    modified: 1672886072502
+    created: 1672884348261
+    url: localhost:8050/endereco
+    name: Listar Endereco
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672884331135
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0fd756e29ed54c8ca9b3c6abde4570f3
+    parentId: fld_791152ba60a147ddb62fdc4302693dbc
+    modified: 1672886304315
+    created: 1672885032387
+    url: localhost:8050/paciente
+    name: Atualizar Pacientes
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Gustavo Henrique", 
+        	"email": "gustavo@gmail.com",
+        	"cpf": "0125487641",
+        	"senha": "12345687",
+        	"consultaId": 14,
+        	"enderecoId": 16, 
+        	"telefoneId": 5
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672884994621
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_791152ba60a147ddb62fdc4302693dbc
+    parentId: wrk_2e8a22150d70408ca36b87fe74c7970d
+    modified: 1672884992569
+    created: 1672884992569
+    name: Paciente
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672884992569
+    _type: request_group
+  - _id: req_b7c8e289fe7344919c16155783648e78
+    parentId: fld_791152ba60a147ddb62fdc4302693dbc
+    modified: 1672886021381
+    created: 1672885007664
+    url: localhost:8050/paciente
+    name: Cadastrar Pacientes
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Gustavo Henrique", 
+        	"email": "gustavo@gmail.com",
+        	"cpf": "0125487641",
+        	"senha": "12345687",
+        	"consultaId": 14,
+        	"enderecoId": 16, 
+        	"telefoneId": 5
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672884994571
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e4a26570230a46dc97266c640625308d
+    parentId: fld_791152ba60a147ddb62fdc4302693dbc
+    modified: 1672885622560
+    created: 1672884994521
+    url: localhost:8050/paciente
+    name: Listar Pacientes
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672884994521
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7b40723428dd4e38a5c0110a16ad821f
+    parentId: fld_791152ba60a147ddb62fdc4302693dbc
+    modified: 1672885624633
+    created: 1672885071876
+    url: localhost:8050/paciente
+    name: Deletar Paciente
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672884994471
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d5c80d60e40745819faacc8305c33770
+    parentId: fld_9cf4a2f3463541bb9dc9b927f73d1bc5
+    modified: 1672886332399
+    created: 1672883082676
+    url: localhost:8050/telefone
+    name: Atualizar Telefone
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"celular": "55 81 30366164",
+        	"fixo": "81 30366569"
+        }
+    parameters:
+      - id: pair_599157152a9c4c74af11f70b7dfa31b5
+        name: id
+        value: "2"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672882897949
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9cf4a2f3463541bb9dc9b927f73d1bc5
+    parentId: wrk_2e8a22150d70408ca36b87fe74c7970d
+    modified: 1672884188413
+    created: 1672882895619
+    name: Telefone
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672876629679
+    _type: request_group
+  - _id: req_e8f3704ae05749f3914d625e68d7bcb5
+    parentId: fld_9cf4a2f3463541bb9dc9b927f73d1bc5
+    modified: 1672885864672
+    created: 1672882897799
+    url: localhost:8050/telefone
+    name: Cadastrar Telefone
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"celular": "81 9856-3221",
+        	"fixo": "81 30366564"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1672882897899
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0b6ce0c927364302ac6f5cd83874775d
+    parentId: fld_9cf4a2f3463541bb9dc9b927f73d1bc5
+    modified: 1672885656753
+    created: 1672884015521
+    url: localhost:8050/telefone
+    name: Deletar Telefone
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672882897874
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a4e75f84cf6d47a194b0cfe792fa90fb
+    parentId: fld_9cf4a2f3463541bb9dc9b927f73d1bc5
+    modified: 1672883075146
+    created: 1672883054521
+    url: localhost:8050/telefone
+    name: Listar Telefone
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672882897849
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_ae2665225fff44f740df76070f3f2d22349e2699
+    parentId: wrk_2e8a22150d70408ca36b87fe74c7970d
+    modified: 1672886983836
+    created: 1672875883346
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1672875883346
+    _type: environment
+  - _id: jar_ae2665225fff44f740df76070f3f2d22349e2699
+    parentId: wrk_2e8a22150d70408ca36b87fe74c7970d
+    modified: 1672875883351
+    created: 1672875883351
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_db4b140f52924a71b78756b3d205223f
+    parentId: wrk_2e8a22150d70408ca36b87fe74c7970d
+    modified: 1672875883327
+    created: 1672875883327
+    fileName: Wco
+    contents: ""
+    contentType: yaml
+    _type: api_spec
