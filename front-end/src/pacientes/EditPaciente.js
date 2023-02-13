@@ -2,43 +2,42 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {useNavigate, useParams} from "react-router-dom";
 
-const EditDentista = () => {
+const EditPaciente = () => {
   
     let navigate = useNavigate();
 
     const {id} = useParams()
 
-    const [dentista, setDentista] = useState({
+    const [paciente, setPaciente] = useState({
 
 		nome: "",
-		especialidade: "",
+		email: "",
 		cpf: "",
-		crm: "", 
 		senha: ""
     });
 
-    const { nome, especialidade, cpf, crm, senha } = dentista;
+    const { nome, email, cpf, senha } = paciente;
 
     const onInputChange = (e) => {
         
-        setDentista({ ...dentista, [e.target.name]: e.target.value });
+        setPaciente({ ...paciente, [e.target.name]: e.target.value });
    
     };
 
     useEffect(()=>{
-        loadDentista()
+        loadPaciente()
     },[])
 
     const onSubmit = async (e) => {
         e.preventDefault();
       
-        await axios.put(`http://localhost:8050/dentista/${id}`, dentista);
-        navigate("/");
+        await axios.put(`http://localhost:8050/paciente/${id}`, paciente);
+        navigate("/listarpaciente");
     };
 
-    const loadDentista  = async () => {
-        const result=await axios.get(`http://localhost:8050/dentista/${id}`)
-        setDentista(result.data)
+    const loadPaciente  = async () => {
+        const result=await axios.get(`http://localhost:8050/paciente/${id}`)
+        setPaciente(result.data)
     }
 
     return (
@@ -68,15 +67,15 @@ const EditDentista = () => {
                         </div>
 
                         <div className={"mb-3"}>
-                            <label htmlFor={"Especialidade"} className={"form-label"}>
-								Especialidade
+                            <label htmlFor={"email"} className={"form-label"}>
+								Email
                             </label>
                             <input
                                 type={"text"}
                                 className={"form-control"}
-                                placeholder={"especialidade"}
-                                name={"especialidade"}
-                                value={especialidade}
+                                placeholder={"email"}
+                                name={"email"}
+                                value={email}
                                 onChange={(e) => onInputChange(e)}
                             />
                         </div>
@@ -91,20 +90,6 @@ const EditDentista = () => {
                                 placeholder={"cpf"}
                                 name={"cpf"}
                                 value={cpf}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-						<div className={"mb-3"}>
-                            <label htmlFor={"Crm"} className={"form-label"}>
-								Crm
-                            </label>
-                            <input
-                                type={"text"}
-                                className={"form-control"}
-                                placeholder={"crm"}
-                                name={"crm"}
-                                value={crm}
                                 onChange={(e) => onInputChange(e)}
                             />
                         </div>
@@ -133,4 +118,4 @@ const EditDentista = () => {
     );
 };
 
-export default EditDentista;
+export default EditPaciente;

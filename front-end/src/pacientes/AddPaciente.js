@@ -2,31 +2,30 @@ import React, { useState } from "react";
 import axios from "axios";
 import {Link, useNavigate} from "react-router-dom";
 
-const AddDentista = () => {
+const AddPaciente = () => {
  
   let navigate = useNavigate();
 
-  const [dentista, setDentista] = useState({
+  const [paciente, setPaciente] = useState({
     nome: "",
-    especialidade: "",
+    email: "",
     cpf: "",
-	crm: "", 
 	senha: ""
   });
 
-  const { nome, especialidade, cpf, crm, senha } = dentista;
+  const { nome, email, cpf, senha } = paciente;
 
   const onInputChange = (e) => {
     
-    setDentista({ ...dentista, [e.target.name]: e.target.value });
+    setPaciente({ ...paciente, [e.target.name]: e.target.value });
    
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
     
-    await axios.post("http://localhost:8050/dentista", dentista);
-    navigate("/listardentista");
+    await axios.post("http://localhost:8050/paciente", paciente);
+    navigate("/listarpaciente");
   };
 
   return (
@@ -38,7 +37,7 @@ const AddDentista = () => {
             "col-md-6 offset-md-3 border rounded p-4 mt-2 shadow"
           }
         >
-          <h2 className={"text-center m-4"}>Cadastro de Dentista</h2>
+          <h2 className={"text-center m-4"}>Cadastro de Paciente</h2>
 
           <form onSubmit={(e) => onSubmit(e)}>
             <div className={"mb-3"}>
@@ -56,15 +55,15 @@ const AddDentista = () => {
             </div>
 
             <div className={"mb-3"}>
-              <label htmlFor={"Especialidade"} className={"form-label"}>
-			  	especialidade
+              <label htmlFor={"Email"} className={"form-label"}>
+			 	 Email
               </label>
               <input
                 type={"text"}
                 className={"form-control"}
-                placeholder={"Especialidade"}
-                name={"especialidade"}
-                value={especialidade}
+                placeholder={"Email"}
+                name={"email"}
+                value={email}
                 onChange={(e) => onInputChange(e)}
               />
             </div>
@@ -79,20 +78,6 @@ const AddDentista = () => {
                 placeholder={"Cpf"}
                 name={"cpf"}
                 value={cpf}
-                onChange={(e) => onInputChange(e)}
-              />
-            </div>
-
-			<div className={"mb-3"}>
-              <label htmlFor={"Crm"} className={"form-label"}>
-                Crm
-              </label>
-              <input
-                type={"text"}
-                className={"form-control"}
-                placeholder={"Crm"}
-                name={"crm"}
-                value={crm}
                 onChange={(e) => onInputChange(e)}
               />
             </div>
@@ -124,4 +109,4 @@ const AddDentista = () => {
   );
 };
 
-export default AddDentista;
+export default AddPaciente;

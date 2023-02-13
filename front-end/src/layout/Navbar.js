@@ -11,7 +11,7 @@ const Navbar = () => {
 
 				<div className={"container"}>
 
-					<a className="navbar-brand" href="#">Web Consultória Odontológica</a>
+					<a className="navbar-brand" href="#">Wco</a>
 					
 					<button className="navbar-toggler" type="button" 
 						data-bs-toggle="collapse" 
@@ -30,8 +30,16 @@ const Navbar = () => {
 				
 					</div>
 
-					<Link className={"btn btn-outline-light"} to={"/adddentista"}>Adicionar Dentista</Link>
+					<Link className={"btn btn-outline-light"} to={"/"}>Adicionar Consulta</Link>
+					<Link className={"btn btn-outline-light"} to={"/"}>Listar Consulta</Link>
 
+					<Link className={"btn btn-outline-light"} to={"/adddentista"}>Adicionar Dentista</Link>
+					<Link className={"btn btn-outline-light"} to={"/listardentista"}>Listar Dentista</Link>
+
+					<Link className={"btn btn-outline-light"} to={"/addpaciente"}>Adicionar Paciente</Link>
+					<Link className={"btn btn-outline-light"} to={"/listarpaciente"}>Listar Paciente</Link>
+					
+					
 				</div>
 
 			</nav>

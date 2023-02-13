@@ -41,7 +41,6 @@ public class Paciente {
 	@OneToMany(mappedBy = "paciente")
     private List<Consulta> consultas;
 
-
     public Paciente (Integer id) {
 
         this.id = id;

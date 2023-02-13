@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const HomeDentista = () => {
 
 	const [dentistas, setDentista] = useState([]);
 
@@ -81,4 +81,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default HomeDentista;

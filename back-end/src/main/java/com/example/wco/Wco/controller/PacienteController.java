@@ -2,6 +2,8 @@ package com.example.wco.Wco.controller;
 
 import com.example.wco.Wco.dto.request.PacienteRequest;
 import com.example.wco.Wco.dto.request.response.PacienteResponse;
+import com.example.wco.Wco.model.Dentista;
+import com.example.wco.Wco.model.Paciente;
 import com.example.wco.Wco.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,14 +30,20 @@ public class PacienteController {
         return service.buscarPacientes();
     }
 
-    @DeleteMapping
-    public void deletarPaciente(Integer id) {
+    @GetMapping("/{id}")
+    Paciente getPacienteById(@PathVariable Integer id) {
+
+        return service.buscarPorid(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletarPaciente(@PathVariable Integer id) {
 
         service.deletarPaciente(id);
     }
 
-    @PutMapping
-    public PacienteResponse atualizarPaciente(@RequestBody PacienteRequest request, Integer id) {
+    @PutMapping("/{id}")
+    public PacienteResponse atualizarPaciente(@RequestBody PacienteRequest request, @PathVariable Integer id) {
 
         return service.atualizarPaciente(request, id);
     }

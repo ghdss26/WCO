@@ -44,8 +44,8 @@ public class DentistaController {
         service.deletarDentista(id);
     }
 
-    @PutMapping
-    public DentistaResponse atualizarDentista(@RequestBody DentistaRequest request, Integer id) {
+    @PutMapping("/{id}")
+    public DentistaResponse atualizarDentista(@RequestBody DentistaRequest request, @PathVariable Integer id) {
 
         return service.atualizarDentista(request, id);
     }

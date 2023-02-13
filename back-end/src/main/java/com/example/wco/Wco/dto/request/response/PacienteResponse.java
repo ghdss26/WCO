@@ -11,6 +11,7 @@ import java.util.List;
 @Data
 public class PacienteResponse {
 
+    private Integer id;
     private String nome;
     private String email;
     private String cpf;
@@ -20,6 +21,7 @@ public class PacienteResponse {
     public static PacienteResponse of(Paciente paciente) {
 
         return PacienteResponse.builder()
+                .id(paciente.getId())
                 .nome(paciente.getNome())
                 .email(paciente.getEmail())
                 .cpf(paciente.getCpf())
