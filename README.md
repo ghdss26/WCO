@@ -2,7 +2,7 @@
 
 Projeto que tem como principio fazer agendamentos de marcação de consultas para dentistas 
 
-## Conhecimentos Adquiridos nesse projeto 
+## Conhecimentos adquiridos nesse projeto 
 
 Integração de APIS - (Interface de Programação de Aplicação), onde foi feito uma arquitetura Monólito para receber na otimização da velocidade 
 entre as requisições feitas pelo comando dos usuários. As APIS foram autenticadas através de Tokens que distribui por camadas de segurança 
@@ -14,7 +14,7 @@ pacote model que é responsavel por criar as entidades para constituir esses res
 Foi usado para o projeto o Dto que obtém a ideia de consistir basicamente, 
 o agrupamento de conjunto de atributos em varias classes simples de forma a otimizar a comunicação.
 
-## Dificuldades Adquiridos nesse projeto 
+## Dificuldades adquiridos nesse projeto 
 
 1 - Como pegar dados das entidades Paciente e Dentista e coloca dentro de uma tag select no html 
 
