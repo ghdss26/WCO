@@ -61,8 +61,7 @@ const HomeDentista = () => {
 								<td>{dentista.crm}</td>
 								<td>
 									<Link className={"btn btn-primary mx-2"} exact to={`/viewdentista/${dentista.id}`}>View</Link>
-									<Link className={"btn btn-outline-primary mx-2"} 
-									 exact to={`/editdentista/${dentista.id}`}>Edit</Link>
+									<Link className={"btn btn-outline-primary mx-2"} exact to={`/editdentista/${dentista.id}`}>Edit</Link>
 									<button className={"btn btn-danger mx-2"} onClick={() => deleteDentista(dentista.id)}>Delete</button>
 								</td>
 								

@@ -33,7 +33,7 @@ const EditDentista = () => {
         e.preventDefault();
       
         await axios.put(`http://localhost:8050/dentista/${id}`, dentista);
-        navigate("/");
+        navigate("/listardentista");
     };
 
     const loadDentista  = async () => {
