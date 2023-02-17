@@ -14,6 +14,18 @@ pacote model que é responsavel por criar as entidades para constituir esses res
 Foi usado para o projeto o Dto que obtém a ideia de consistir basicamente, 
 o agrupamento de conjunto de atributos em varias classes simples de forma a otimizar a comunicação.
 
+## Dificuldades Adquiridos nesse projeto 
+
+1 - Como pegar dados das entidades Paciente e Dentista e coloca dentro de uma tag select no html 
+
+2 - Como mostrar dados dos atributos Paciente e Dentista, ligadas a entidade Consulta em uma tela de visualização na web 
+
+3 - Dificuldade em saber listar por id, dentro do Spring Boot os dados que vêm das entidade consulta com os atributos Paciente e Dentista 
+
+4 - Orientação a objeção entre os pacotes do Spring boot, sendo realizado um dto 
+
+5 - Dificuldade em atualizar os dados que vêm da tabela consulta la no front - end. 
+
 Relacionamento de Tabelas - um para muitos 
 
 ## Tecnologia Utilizada 
@@ -30,7 +42,9 @@ Relacionamento de Tabelas - um para muitos
 
 -[Insomnia](https://insomnia.rest/download) 
 
-## Depedencias do Spring Boot 
+-[React](https://pt-br.reactjs.org/)
+
+## Depedências do Spring Boot 
 
 -[Lombok](https://imasters.com.br/back-end/projeto-lombok-escrevendo-menos-codigo-em-java) 
 
@@ -42,6 +56,16 @@ Relacionamento de Tabelas - um para muitos
 
 -[Spring Boot Start Web](https://www.javatpoint.com/spring-boot-starter-web)
 
+## Depedências do React 
+
+-[Hooks](https://reactjs.org/docs/hooks-intro.html) 
+
+-[Axios](https://axios-http.com/ptbr/docs/intro) 
+
+-[npm react-rout-dom](https://www.npmjs.com/package/react-router-dom) 
+
+-[npm Bootstrap](https://www.npmjs.com/package/bootstrap)
+
 ## Rotas do Spring Boot - Sistema Wco - Web Consulta Odontológica 
 
 Precisa adicionar essas rotas no Postman, Insomnia ou Navegadores para ver os dados do back - end, vindas pelo banco de dados.
@@ -50,11 +74,7 @@ Entidade Consulta - localhost:8050/consulta
 
 Entidade Dentista - localhost:8050/dentista
 
-Entidade Endereco - localhost:8050/endereco
-
 Entidade Paciente - localhost:8050/paciente
-
-Entidade Telefone - localhost:8050/telefone
 
 ## Informações sobre a Api do Sistema Wco 
 
@@ -85,7 +105,7 @@ Entidade Telefone - localhost:8050/telefone
   $ Possuir um programa Postman ou Insmonia para copiar e colar as rotas das entidades e ver o crud completo
  
 ```
-## Como executar o projeto
+## Como executar o projeto no Spring Boot 
 
 ## Back end
 Pré-requisitos: Java 11
@@ -94,9 +114,25 @@ Pré-requisitos: Java 11
 # clonar repositório
 git clone https://github.com/ghdss26/wco.git
 
-# entrar na pasta do projeto back end
-cd wco
+# entrar na pasta do projeto wco
+cd wco 
+cd back-end 
 
 # executar o projeto
 ./mvnw spring-boot:run
+```
+## Como executar o projeto no React 
+
+```bash
+# clonar repositório
+git clone https://github.com/ghdss26/wco.git
+
+# entrar na pasta do projeto wco
+cd wco 
+cd front-end 
+
+# executar o projeto
+npm start run 
+
+digitar no navegador: http://localhost/3000
 ```
